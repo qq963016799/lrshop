@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./sass/lr-login.css">
+    <link rel="stylesheet" href="./css/font_icon/iconfont.css">
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <script src="./swiper/swiper.min.js"></script>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script src="./js/lr-table.js"></script>
+    <script src="./js/lr.js"></script>
+</head>
+
+<body>
+    <!-- nav-->
+    <div class="nav">
+        <div class="container clearfix">
+            <div class="logo"><a href="lr-index.html"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </div>
+    <!-- nav-->
+    <!-- banner-->
+    <div class="banner">
+        <div class="container clearfix">
+            <div class="log-fom" id="dlfm">
+                <i></i>
+                <b></b>
+                <i></i>
+                <b></b>
+                <div>
+                    <ul>
+                        <li>登录</li>
+                        <li id="zc">注册账号</li>
+                        <ul>
+                </div>
+                <div class="log clearfix">
+                    <input id="user" type="text">
+                    <input id="pas" type="password" placeholder="密码">
+
+                    <div class="rem">
+                        <label>
+                            <input type="checkbox">
+                            <em>记住登录状态</em>
+                        </label>
+                        <span>重置密码</span>
+                    </div>
+                    <div class="go">
+                        <span>登录</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 注册 -->
+            <div class="reg-fom" id="zcfm">
+                <div>
+                    <ul>
+                        <li id="dl">登录</li>
+                        <li>注册账号</li>
+                        <ul>
+                </div>
+                <div class="reg clearfix">
+                    <input id="user" type="text" placeholder="邮箱/手机号">
+                    <input id="pas" type="text" placeholder="密码">
+                    <input id="pas" type="text" placeholder="手机号">
+
+                    <div class="go1">
+                        <span>注册</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner-->
+
+</body>
+<script>
+    var us = document.querySelector("#user")
+    var pas = document.querySelector("#pas")
+    var i = document.getElementsByTagName("i")
+    var b = document.getElementsByTagName("b")
+    console.log(i[0])
+    us.onblur = function () {
+        var user = /^[\u2E80-\u9FFF\w]{4,20}$/;
+        if (user.test(this.value)) {
+            b[0].style.display = "none"
+            i[0].style.display = "block"
+        } else {
+            i[0].style.display = "none"
+            b[0].style.display = "block"
+        }
+    }
+    pas.onblur = function () {
+        var paasw = /^[a-z0-9_-]{6,18}$/;
+        if (paasw.test(this.value)) {
+            b[1].style.display = "none"
+            i[1].style.display = "block"
+        } else {
+            i[1].style.display = "none"
+            b[1].style.display = "block"
+        }
+    }
+</script>
+
+</html>

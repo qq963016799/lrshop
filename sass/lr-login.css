@@ -1,0 +1,288 @@
+.container {
+  width: 1196px;
+  margin: 0 auto;
+}
+
+/*--------nav go-------*/
+.nav {
+  width: 100%;
+  height: 120px;
+}
+
+.logo {
+  width: 330px;
+  height: 120px;
+  float: left;
+}
+
+.logo a {
+  width: 330px;
+  height: 120px;
+  display: block;
+}
+
+/*--------nav end-------*/
+/*--------denglu go-------*/
+.banner {
+  width: 100%;
+  height: 482px;
+  background: url(../images/ia_100.jpg) no-repeat center 0;
+}
+
+.banner .container {
+  position: relative;
+}
+
+.banner .container .log-fom {
+  width: 430px;
+  height: 460px;
+  background-color: #fff;
+  position: relative;
+  float: right;
+  margin-top: 11px;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.banner .container .log-fom i:nth-of-type(1) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/5.png) no-repeat center center/24px 24px;
+  top: 107px;
+  right: 32px;
+}
+
+.banner .container .log-fom b:nth-of-type(1) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/6.png) no-repeat center center/24px 24px;
+  top: 107px;
+  right: 32px;
+}
+
+.banner .container .log-fom i:nth-of-type(2) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/5.png) no-repeat center center/24px 24px;
+  top: 178px;
+  right: 32px;
+}
+
+.banner .container .log-fom b:nth-of-type(2) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/6.png) no-repeat center center/24px 24px;
+  top: 178px;
+  right: 32px;
+}
+
+.banner .container .log-fom ul {
+  width: 380px;
+  height: 40px;
+  padding-top: 44px;
+}
+
+.banner .container .log-fom ul li:nth-child(1) {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #529bef;
+}
+
+.banner .container .log-fom ul li:nth-child(2) {
+  float: right;
+  color: #333;
+  font-size: 18px;
+}
+
+.banner .container .log-fom ul li:nth-child(2):hover {
+  color: #529bef;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner .container .log-fom .log {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+}
+
+.banner .container .log-fom .log input:nth-of-type(1),
+.banner .container .log-fom .log input:nth-of-type(2) {
+  background-size: 20px 20px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 4px 6px 4px 38px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.banner .container .log-fom .log input::-webkit-input-placeholder {
+  color: #aab2bd;
+}
+
+.banner .container .log-fom .log input:nth-of-type(1) {
+  background-image: url(../images/1.png);
+}
+
+.banner .container .log-fom .log input:nth-of-type(2) {
+  background-image: url(../images/2.png);
+}
+
+.banner .container .log-fom .log #user,
+.banner .container .log-fom .log #pas {
+  width: 380px;
+  height: 44px;
+}
+
+.go span {
+  width: 380px;
+  height: 44px;
+  line-height: 44px;
+  display: block;
+  text-align: center;
+  background: #529bef;
+  color: #fff;
+  cursor: pointer;
+}
+
+.rem {
+  display: flex;
+  width: 380px;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.rem span {
+  float: right;
+  color: #529bef;
+}
+
+/*--------denglu end-------*/
+/*--------zhuce go-------*/
+.banner {
+  width: 100%;
+  height: 482px;
+  background: url(../images/ia_100.jpg) no-repeat center 0;
+}
+
+.banner .container {
+  position: relative;
+}
+
+.banner .container .reg-fom {
+  width: 430px;
+  height: 460px;
+  background-color: #fff;
+  position: absolute;
+  float: right;
+  display: none;
+  right: 0;
+  margin-top: 11px;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.banner .container .reg-fom ul {
+  width: 380px;
+  height: 40px;
+  padding-top: 44px;
+}
+
+.banner .container .reg-fom ul li:nth-child(1) {
+  float: left;
+  color: #333;
+  font-size: 18px;
+}
+
+.banner .container .reg-fom ul li:nth-child(1):hover {
+  color: #529bef;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner .container .reg-fom ul li:nth-child(2) {
+  color: #529bef;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.banner .container .reg-fom .reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+}
+
+.banner .container .reg-fom .reg input:nth-of-type(1),
+.banner .container .reg-fom .reg input:nth-of-type(2),
+.banner .container .reg-fom .reg input:nth-of-type(3) {
+  background-size: 20px 20px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 4px 6px 4px 38px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.banner .container .reg-fom .reg input::-webkit-input-placeholder {
+  color: #aab2bd;
+}
+
+.banner .container .reg-fom .reg input:nth-of-type(1) {
+  background-image: url(../images/1.png);
+}
+
+.banner .container .reg-fom .reg input:nth-of-type(2) {
+  background-image: url(../images/2.png);
+}
+
+.banner .container .reg-fom .reg input:nth-of-type(3) {
+  background-image: url(../images/3.png);
+}
+
+.banner .container .reg-fom .reg #user,
+.banner .container .reg-fom .reg #pas {
+  width: 380px;
+  height: 44px;
+}
+
+.go1 span {
+  width: 380px;
+  height: 44px;
+  line-height: 44px;
+  display: block;
+  text-align: center;
+  background: #ed1c24;
+  color: #fff;
+}
+
+.rem1 {
+  display: flex;
+  width: 380px;
+  height: 32px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.rem1 span {
+  float: right;
+  color: #529bef;
+}
+
+/*--------zhuce end-------*/
