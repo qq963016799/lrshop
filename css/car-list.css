@@ -375,22 +375,36 @@ body {
 /* 购物车 ks------------- */
 .car {
     width: 100%;
-    height: 450px;
+    height: 250px;
 }
 
 .car-main {
-    height: 450px;
+    width: 350px;
+    height: 270px;
+    margin: 0 auto
 }
 
-.car-main .mag img {
-    width: 448px;
-    height: 448px;
+.car-main img {
+    float: left;
+    display: block;
 }
-
-.car-main .buy {
-    width: 720px;
-    height: 329px;
-    float: right;
+.car-main div {
+    float: left;
+    margin-left: 30px;
+}
+.car-main span {
+    display: block;
+    margin-top: 6px
+}
+.car-main span:nth-child(3) {
+    width: 174px;
+    height: 30px;
+    line-height: 30px;
+    background: #C80000;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    cursor: pointer;
 }
 
 /* mag  */
