@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/font_icon/iconfont.css">
     <script src="./js/jquery-1.11.0.min.js"></script>
     <script src="./js/lr-table.js"></script>
+    <!-- <script src="./js/lr-car.js"></script> -->
 </head>
 
 <body>
@@ -75,16 +76,14 @@
     <div class="car">
         <div class="container clearfix">
             <div class="car-main clearfix">
-                <div class="mag">
-                    <div class="up-list">
+                <div class="mag leftbox">
+                    <div class="up-list sBox">
                         <img src="./images/ia_101.jpg" alt="">
+                        <span></span>
                     </div>
-                    <div class="mid-list">
+                    <div class="rgt-list bBox">
                         <img src="./images/ia_101.jpg" alt="">
-                        <img src="./images/ia_10001.jpg" alt="">
-                    </div>
-                    <div class="rgt-list">
-                        <img src="./images/ia_101.jpg" alt="">
+                        <span></span>
                     </div>
                 </div>
                 <div class="buy">
@@ -224,10 +223,75 @@
 
 
 
-
-
-
-
 </body>
+<script>
+class Magnifier {
+    constructor() {
+        this.sBox = document.querySelector(".sBox");
+        this.sSpan = document.querySelector(".sBox span");
+        this.bBox = document.querySelector(".bBox");
+        this.bImg = document.querySelector(".bBox img");
+
+        this.sSpan.style.cssText = "";
+        this.init();
+    }
+    init() {
+        var that = this;
+        this.sBox.onmouseover = function () {
+            that.over()
+            console.log(1)
+        }
+        this.sBox.onmousemove = function (eve) {
+            var e = eve || window.event;
+            console.log(3)
+            that.move(e)
+        }
+        this.sBox.onmouseout = function () {
+            that.out()
+            console.log(2)
+        }
+    }
+    over() {
+        this.sSpan.style.display = "block";
+        this.bBox.style.display = "block"
+        var bl = this.bBox.offsetWidth / this.bImg.offsetWidth;
+        // console.log(this.sBox.offsetHeight * bl)
+        this.sSpan.style.width = (this.sBox.offsetWidth * bl) + "px";
+        this.sSpan.style.height = (this.sBox.offsetHeight * bl) + "px";
+        // 算出span的大小
+    }
+    move(e) {
+        // 计算比例
+        var l = e.clientX - this.sBox.offsetLeft - this.sSpan.offsetWidth / 2;
+        var t = e.clientY - this.sBox.offsetTop - this.sSpan.offsetHeight / 2;
+        if (l < 0) {
+            l = 0
+        };
+        if (t < 0) {
+            t = 0
+        };
+        if(l>this.sBox.offsetWidth-this.sSpan.offsetWidth){
+            l=this.sBox.offsetWidth-this.sSpan.offsetWidth
+        }
+        if(t>this.sBox.offsetHeight-this.sSpan.offsetHeight){
+            t=this.sBox.offsetHeight-this.sSpan.offsetHeight
+        }
+
+        this.sSpan.style.left = l + "px";
+        this.sSpan.style.top = t + "px";
+
+       this.bImg.style.left=l/(this.sBox.offsetWidth-this.sSpan.offsetWidth)*(this.bBox.offsetWidth-this.bImg.offsetWidth)+"px"
+       this.bImg.style.top=t/(this.sBox.offsetHeight-this.sSpan.offsetHeight)*(this.bBox.offsetHeight-this.bImg.offsetHeight)+"px"
+
+
+    }
+    out() {
+        // 隐藏
+        this.sSpan.style.display = "none";
+        this.bBox.style.display = "none";
+    }
+}
+new Magnifier()
+</script>
 
 </html>
