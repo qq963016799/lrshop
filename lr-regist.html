@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./sass/lr-regist.css">
+    <link rel="stylesheet" href="./css/font_icon/iconfont.css">
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <script src="./swiper/swiper.min.js"></script>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <!-- <script src="./js/lr-table.js"></script> -->
+    <script src="./js/cookie.js"></script>
+</head>
+
+<body>
+    <!-- nav-->
+    <div class="nav">
+        <div class="container clearfix">
+            <div class="logo"><a href="lr-index.html"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </div>
+    <!-- nav-->
+    <!-- banner-->
+    <div class="banner">
+        <div class="container clearfix">
+            <div class="reg-fom" id="zcfm">
+                <i></i>
+                <b></b>
+                <i></i>
+                <b></b>
+                <div>
+                    <ul>
+                        <li id="dl" onclick="javascript:window.open('lr-login.html')">登录</li>
+                        <li><i></i>注册账号</li>
+                        <ul>
+                </div>
+
+                <div class="reg clearfix">
+                    <input id="user" type="text">
+                    <input id="pas" type="text">
+
+                    <div class="go1">
+                        <span id="reg">注册</span>
+                    </div>
+                    <em></em>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner-->
+
+</body>
+<script>
+    //    -------注册-------
+    class Register{
+			constructor(){
+				this.user = document.getElementById("user")
+				this.pas = document.getElementById("pas")
+				this.reg = document.getElementById("reg")
+				this.log = document.getElementById("log")
+				this.em = document.querySelector("em")
+				
+				this.addEvent();
+			}
+			addEvent(){
+				var that = this;
+				this.reg.onclick = function(){
+					that.u = that.user.value;
+					that.p = that.pas.value;
+					
+					that.setMsg();
+				}
+				this.log.onclick = function(){
+					location.href = "lr-login.html";
+				}
+			}
+			setMsg(){
+//				数据格式:[{user:"admin",pas:"123",onoff:0},{...},{...},...]
+				
+				this.msg = getCookie("userMsg") ? JSON.parse(getCookie("userMsg")) : [];
+//				第一个用户
+				if(this.msg.length<1){
+					this.msg.push({
+						user:this.u,
+						pas:this.p,
+						onoff:0
+					})
+					this.success();
+				}else{
+//				非第一个用户
+//					重名了
+					var type = this.msg.some((val,idx)=>{
+						return val.user === this.u;
+					});
+					if(type){
+						this.em.innerHTML = "用户名重复";
+					}else{
+//					没重名,直接注册
+						this.msg.push({
+							user:this.u,
+							pas:this.p,
+							onoff:0
+						})
+						this.success();
+					}
+				}
+				setCookie("userMsg",JSON.stringify(this.msg));
+			}
+			success(){
+				this.em.innerHTML = "注册成功";
+				setTimeout(()=>{
+					location.href = "lr-login.html";
+				},5000)
+			}
+		}
+		
+		new Register;
+
+    // 正则-------------------
+    // var user = document.querySelector("#user")
+    // var pas = document.querySelector("#pas")
+    // var i = document.getElementsByTagName("i")
+    // var b = document.getElementsByTagName("b")
+    // console.log(i[0])
+    // user.onblur = function () {
+    //     var myuser = /^[\u2E80-\u9FFF\w]{4,20}$/;
+    //     if (user.test(this.value)) {
+    //         b[0].style.display = "none"
+    //         i[0].style.display = "block"
+    //     } else {
+    //         i[0].style.display = "none"
+    //         b[0].style.display = "block"
+    //     }
+    // }
+    // pas.onblur = function () {
+    //     var paasw = /^[a-z0-9_-]{6,18}$/;
+    //     if (paasw.test(this.value)) {
+    //         b[1].style.display = "none"
+    //         i[1].style.display = "block"
+    //     } else {
+    //         i[1].style.display = "none"
+    //         b[1].style.display = "block"
+    //     }
+    // }
+</script>
+
+</html>

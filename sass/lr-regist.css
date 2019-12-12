@@ -250,7 +250,59 @@
 
 .rem1 span {
   float: right;
-  color: #529bef;
+  /* color: #529bef; */
 }
 
 /*--------zhuce end-------*/
+.reg em{
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  color: #03bb3a;
+  right : 30px;
+  bottom: 184px;
+  text-align: right;
+  font-weight: bold;
+}
+/* ----------定位图片----------- */
+i:nth-of-type(1) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/5.png) no-repeat center center/24px 24px;
+  top: 114px;
+  right: 46px;
+}
+
+b:nth-of-type(1) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/6.png) no-repeat center center/24px 24px;
+  top: 114px;
+  right: 46px;
+}
+
+i:nth-of-type(2) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/5.png) no-repeat center center/24px 24px;
+  top: 200px;
+  right: 46px;
+}
+
+b:nth-of-type(2) {
+  width: 24px;
+  height: 24px;
+  display: none;
+  position: absolute;
+  background: url(../images/6.png) no-repeat center center/24px 24px;
+  top: 200px;
+  right: 46px;
+}

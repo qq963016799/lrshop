@@ -113,7 +113,6 @@ body {
 .shop_car {
     width: 122px;
     height: 40px;
-    border: 1px solid #2884c7;
     float: left;
     margin-top: 32px;
     margin-left: 26px;
@@ -121,15 +120,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ddd
-}
-
-.shop_car:hover {
+    border: 1px solid #ddd;
     background: #2884c7
 }
 
-.shop_car:hover i {
-    color: #fff
+.shop_car:hover {
+    background: #0672be;
+    cursor: pointer;
 }
 
 .shop_car i {
@@ -137,7 +134,7 @@ body {
     height: 22px;
     font-size: 22px;
     display: block;
-    color: #2884c7
+    color: #fff;
 }
 
 .banner {
@@ -686,6 +683,7 @@ body {
     text-decoration: line-through
 }
 
+/* family ks*/
 .family {
     width: 100%;
     margin-top: 20px
@@ -840,6 +838,7 @@ body {
 .family .family_main ul li .price span:nth-child(2) {
     text-decoration: line-through
 }
+/* family end  */
 
 .service {
     width: 100%;
@@ -957,4 +956,35 @@ body {
     font-size: 10px;
     height: 42px;
     width: 100%
+}
+.lt{
+    position: absolute;
+    position: fixed;
+    right: 10px;
+    bottom: 270px;
+    width: 64px;
+    background-color:#fff;
+    z-index: 9;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+.lt ul li{
+    width: 64px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+.lt ul li a{
+    display: block;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    text-align: center；
+}
+.lt ul li a:hover{
+    display: block;
+    color: #fff;
+    background-color:#f05353;
+    text-align:center;
+    cursor: pointer;
 }

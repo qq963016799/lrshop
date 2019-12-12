@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/lr-shop-list.css">
+    <link rel="stylesheet" href="./css/font_icon/iconfont.css">
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <script src="./swiper/swiper.min.js"></script>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script src="./js/lr-table.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./cookie.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container clearfix">
+            <div class="left-bar">
+                <ul>
+                    <li><a href="lr-index.html">商城首页</a></li>
+                    <li><a href="lr-login.html">登录<i>|</i></a><a href="lr-regist .html">注册</a></li>
+                </ul>
+            </div>
+            <div class="right-bar">
+                <ul>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">合作渠道</a></li>
+                    <li><a href="">帮助中心</a></li>
+                    <li><a href="">手机版</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <!-- nav-->
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <div class="logo"><a href="lr-index.html"><img src="./images/logo.png" alt=""></a></div>
+        </div>
+    </div>
+    <!-- nav-->
+    <!-- 列表 -->
+    <div class="family">
+        <div class="container clearfix">
+            <div class="family_main clearfix">
+                <ul id="cont">
+                    <div class="car-main clearfix">
+                        <img src="./images/02.jpg" alt="">
+                        <div>
+                            <span>商品已经下架了！</span>
+                            <span>我们会尽快上架哦！</span>
+                            <!-- <a href="lr-shop-list.html"><span>购买</span></a> -->
+                        </div>
+                    </div>
+                    <!---------- 下班边 ---------->
+                    <!-- <li>
+                        <img src="./images/ia_10023.jpg" alt="">
+                        <div class="show">
+                            <h4>￥899.00</h4>
+                            <p>Y65S底座版</p>
+                        </div>
+                        <div class="price">
+                            <span>购买</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/ia_10013.jpg" alt="">
+                        <div class="show">
+                            <h4>￥3799.00</h4>
+                            <p>Y32H底座版</p>
+                        </div>
+                        <div class="price">
+                            <span>购买</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/ia_10015.jpg" alt="">
+                        <div class="show">
+                            <h4>￥999.00</h4>
+                            <p>Y65</p>
+                        </div>
+                        <div class="price">
+                            <span>购买</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/ia_10016.jpg" alt="">
+                        <div class="show">
+                            <h4>￥3599.00</h4>
+                            <p>Y55S底座版</p>
+                        </div>
+                        <div class="price">
+                            <span>购买</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/ia_10017.jpg" alt="">
+                        <div class="show">
+                            <h4>￥2199.00</h4>
+                            <p>Y43S底座版</p>
+                        </div>
+                        <div class="price">
+                            <span>购买</span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- sevice ks-->
+    <div class="service">
+        <div class="container clearfix">
+            <ul>
+                <li><i></i><a href="">正品保证</a></li>
+                <li><i></i><a href="">正品保证</a></li>
+                <li><i></i><a href="">正品保证</a></li>
+                <li><i></i><a href="">正品保证</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- sevice end-->
+
+    <!-- 底部开始 -->
+    <div class="footer">
+        <div class="container clearfix">
+
+            <div class="footer-l">
+                <dl>
+                    <dt>选购及了解</dt>
+                    <dd><a>超级电视</a></a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+            </div>
+            <div class="footer-r clearfix">
+                <h4>1010-9000</h4>
+                <span>在线客服</span>
+                <div>服务时间：9:00-22:00</div>
+                <p>*生活家频道商品服务
+                    需联系详情页商家电话</p>
+            </div>
+        </div>
+    </div>
+    <!-- 版本开始 -->
+    <div class="bb">
+        <div class="container">
+            <div>Copyright © 2004-2019 乐融商城 All rights reserved | 京ICP备19019019号-1|京公网安备：11000002000099号 | 营业执照信息</div>
+        </div>
+    </div>
+    <script>
+        class List {
+            constructor() {
+                this.url = "http://localhost/lr/lrshop/json/shop-list-goods.json";
+                this.cont = document.getElementById("cont");
+
+                this.load()
+                this.addEvent();
+            }
+            load() {
+                var that = this;
+                ajaxGet(this.url, function (res) {
+                    that.res = JSON.parse(res)
+                    that.display();
+                })
+            }
+            display() {
+                var str = ""
+                for (var i = 0; i < this.res.length; i++) {
+                    str += `<li index="${this.res[i].goodsId}">
+								<img src="${this.res[i].img}" alt="">
+                                <div class="show">
+                                    <h4>${this.res[i].price}</h4>
+                                    <p>${this.res[i].name}</p>
+								</div>
+								<div class="price">
+                                    <span>购买</span>
+                                </div>
+							</li>`;
+                }
+                this.cont.innerHTML = str;
+            }
+            addEvent() {
+                var that = this;
+                this.cont.addEventListener("click", function (eve) {
+                    var e = eve || window.event;
+                    var target = e.target || e.srcElement;
+                    if (target.className == "addCar") {
+                        that.id = target.parentNode.getAttribute("index");
+                        //console.log(that.id)
+                        that.setCookie();
+                    }
+                })
+            }
+            setCookie() {
+                this.goods = getCookie("goodsDECookie") ? JSON.parse(getCookie("goodsDECookie")) : [];
+
+                //第一次加入购物车
+                if (this.goods.length < 1) {
+                    //直接加入
+                    this.goods.push({
+                        id: this.id,
+                        num: 1
+                    })
+                } else {
+
+                    var i = 0;
+                    var onoff = this.goods.some((val, idx) => {
+                        i = idx;
+                        return val.id === this.id;
+                    })
+                    // 新商品,增加
+                    if (!onoff) {
+                        this.goods.push({
+                            id: this.id,
+                            num: 1
+                        })
+                    } else {
+                        this.goods[i].num++;
+                    }
+                }
+                setCookie("goodsDECookie", JSON.stringify(this.goods))
+            }
+        }
+
+        new List;
+    </script>
+</body>
+
+</html>

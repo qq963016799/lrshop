@@ -20,7 +20,7 @@
         <div class="container clearfix">
             <div class="left-bar">
                 <ul>
-                    <li><a href="">商城首页</a></li>
+                    <li><a href="lr-index.html">商城首页</a></li>
                     <li><a href="lr-login..html">登录<i>|</i></a><a href="lr-regist .html">注册</a></li>
                 </ul>
             </div>
@@ -132,7 +132,7 @@
                             <dd>120.00</dd>
                         </dl>
                         <div class="join">
-                            <span>加入购物车</span>
+                            <span onclick="javascript:window.open('lr-carts.html')">加入购物车</span>
                         </div>
                     </div>
                 </div>
@@ -225,73 +225,75 @@
 
 </body>
 <script>
-class Magnifier {
-    constructor() {
-        this.sBox = document.querySelector(".sBox");
-        this.sSpan = document.querySelector(".sBox span");
-        this.bBox = document.querySelector(".bBox");
-        this.bImg = document.querySelector(".bBox img");
+    class Magnifier {
+        constructor() {
+            this.sBox = document.querySelector(".sBox");
+            this.sSpan = document.querySelector(".sBox span");
+            this.bBox = document.querySelector(".bBox");
+            this.bImg = document.querySelector(".bBox img");
 
-        this.sSpan.style.cssText = "";
-        this.init();
-    }
-    init() {
-        var that = this;
-        this.sBox.onmouseover = function () {
-            that.over()
-            console.log(1)
+            this.sSpan.style.cssText = "";
+            this.init();
         }
-        this.sBox.onmousemove = function (eve) {
-            var e = eve || window.event;
-            console.log(3)
-            that.move(e)
+        init() {
+            var that = this;
+            this.sBox.onmouseover = function () {
+                that.over()
+                console.log(1)
+            }
+            this.sBox.onmousemove = function (eve) {
+                var e = eve || window.event;
+                console.log(3)
+                that.move(e)
+            }
+            this.sBox.onmouseout = function () {
+                that.out()
+                console.log(2)
+            }
         }
-        this.sBox.onmouseout = function () {
-            that.out()
-            console.log(2)
+        over() {
+            this.sSpan.style.display = "block";
+            this.bBox.style.display = "block"
+            var bl = this.bBox.offsetWidth / this.bImg.offsetWidth;
+            // console.log(this.sBox.offsetHeight * bl)
+            this.sSpan.style.width = (this.sBox.offsetWidth * bl) + "px";
+            this.sSpan.style.height = (this.sBox.offsetHeight * bl) + "px";
+            // 算出span的大小
         }
-    }
-    over() {
-        this.sSpan.style.display = "block";
-        this.bBox.style.display = "block"
-        var bl = this.bBox.offsetWidth / this.bImg.offsetWidth;
-        // console.log(this.sBox.offsetHeight * bl)
-        this.sSpan.style.width = (this.sBox.offsetWidth * bl) + "px";
-        this.sSpan.style.height = (this.sBox.offsetHeight * bl) + "px";
-        // 算出span的大小
-    }
-    move(e) {
-        // 计算比例
-        var l = e.clientX - this.sBox.offsetLeft - this.sSpan.offsetWidth / 2;
-        var t = e.clientY - this.sBox.offsetTop - this.sSpan.offsetHeight / 2;
-        if (l < 0) {
-            l = 0
-        };
-        if (t < 0) {
-            t = 0
-        };
-        if(l>this.sBox.offsetWidth-this.sSpan.offsetWidth){
-            l=this.sBox.offsetWidth-this.sSpan.offsetWidth
-        }
-        if(t>this.sBox.offsetHeight-this.sSpan.offsetHeight){
-            t=this.sBox.offsetHeight-this.sSpan.offsetHeight
-        }
+        move(e) {
+            // 计算比例
+            var l = e.clientX - this.sBox.offsetLeft - this.sSpan.offsetWidth / 2;
+            var t = e.clientY - this.sBox.offsetTop - this.sSpan.offsetHeight / 2;
+            if (l < 0) {
+                l = 0
+            };
+            if (t < 0) {
+                t = 0
+            };
+            if (l > this.sBox.offsetWidth - this.sSpan.offsetWidth) {
+                l = this.sBox.offsetWidth - this.sSpan.offsetWidth
+            }
+            if (t > this.sBox.offsetHeight - this.sSpan.offsetHeight) {
+                t = this.sBox.offsetHeight - this.sSpan.offsetHeight
+            }
 
-        this.sSpan.style.left = l + "px";
-        this.sSpan.style.top = t + "px";
+            this.sSpan.style.left = l + "px";
+            this.sSpan.style.top = t + "px";
 
-       this.bImg.style.left=l/(this.sBox.offsetWidth-this.sSpan.offsetWidth)*(this.bBox.offsetWidth-this.bImg.offsetWidth)+"px"
-       this.bImg.style.top=t/(this.sBox.offsetHeight-this.sSpan.offsetHeight)*(this.bBox.offsetHeight-this.bImg.offsetHeight)+"px"
+            this.bImg.style.left = l / (this.sBox.offsetWidth - this.sSpan.offsetWidth) * (this.bBox.offsetWidth -
+                this.bImg.offsetWidth) + "px"
+            this.bImg.style.top = t / (this.sBox.offsetHeight - this.sSpan.offsetHeight) * (this.bBox.offsetHeight -
+                this.bImg.offsetHeight) + "px"
 
 
+        }
+        out() {
+            // 隐藏
+            this.sSpan.style.display = "none";
+            this.bBox.style.display = "none";
+        }
     }
-    out() {
-        // 隐藏
-        this.sSpan.style.display = "none";
-        this.bBox.style.display = "none";
-    }
-}
-new Magnifier()
+    new Magnifier()
 </script>
 
 </html>

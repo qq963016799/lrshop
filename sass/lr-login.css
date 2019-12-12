@@ -51,7 +51,7 @@
   position: absolute;
   background: url(../images/5.png) no-repeat center center/24px 24px;
   top: 107px;
-  right: 32px;
+  right: 46px;
 }
 
 .banner .container .log-fom b:nth-of-type(1) {
@@ -61,7 +61,7 @@
   position: absolute;
   background: url(../images/6.png) no-repeat center center/24px 24px;
   top: 107px;
-  right: 32px;
+  right: 46px;
 }
 
 .banner .container .log-fom i:nth-of-type(2) {
@@ -71,17 +71,17 @@
   position: absolute;
   background: url(../images/5.png) no-repeat center center/24px 24px;
   top: 178px;
-  right: 32px;
+  right: 46px;
 }
 
 .banner .container .log-fom b:nth-of-type(2) {
   width: 24px;
-  height: 24px;
+  height: 46px;
   display: none;
   position: absolute;
   background: url(../images/6.png) no-repeat center center/24px 24px;
   top: 178px;
-  right: 32px;
+  right: 46px;
 }
 
 .banner .container .log-fom ul {
@@ -286,3 +286,15 @@
 }
 
 /*--------zhuce end-------*/
+.log h4 {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  color: red;
+  right: 30px;
+  bottom: 208px;
+  text-align: right;
+  font-weight: bold;
+}

@@ -1,0 +1,31 @@
+[{
+    "img":"./images/ia_10072.jpg",
+    "name":"脸部按摩仪",
+    "deta":"V脸塑形，提拉紧致",
+    "price":"￥2340",
+    "goodsId":"1231231"
+},{
+    "img":"./images/ia_10073.png",
+    "name":"手持吸尘器",
+    "deta":"一机多用，无绳便捷",
+    "price":"￥199",
+    "goodsId":"1231231"
+},{
+    "img":"./images/ia_10074.jpg",
+    "name":"北欧欧慕",
+    "deta":"珍馐美馔 炙烤美味",
+    "price":"￥39",
+    "goodsId":"123fdf"
+},{
+    "img":"./images/ia_10076.jpg",
+    "name":"炊大皇好家福锅",
+    "deta":"燃气煤气罩明火电磁炉",
+    "price":"￥1599",
+    "goodsId":"12ff"
+},{
+    "img":"./images/ia_10077.jpg",
+    "name":"多功能鸳鸯",
+    "deta":"燃气煤气罩明火电磁炉",
+    "price":"￥1599",
+    "goodsId":"12ff"
+}]

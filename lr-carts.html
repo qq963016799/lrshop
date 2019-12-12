@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/carts.css">
+    <script src="./js/carts.js"></script>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container clearfix">
+            <div class="left-bar">
+                <ul>
+                    <li><a href="lr-index.html">商城首页</a></li>
+                    <li><a href="lr-login..html">登录<i>|</i></a><a href="lr-regist .html">注册</a></li>
+                </ul>
+            </div>
+            <div class="right-bar">
+                <ul>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">合作渠道</a></li>
+                    <li><a href="">帮助中心</a></li>
+                    <li><a href="">手机版</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <!-- nav-->
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <div class="logo"><a href="lr-index.html"><img src="./images/logo.png" alt=""></a></div>
+            <div class="search clearfix">
+            </div>
+        </div>
+    </div>
+    <!-- nav-->
+    <section class="cartMain">
+        <div class="cartMain_hd">
+            <ul class="order_lists cartTop">
+                <li class="list_chk">
+                    <!--所有商品全选-->
+                    <input type="checkbox" id="all" class="whole_check">
+                    <label for="all"></label>
+                    全选
+                </li>
+                <li class="list_con">商品信息</li>
+                <li class="list_info">商品参数</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount">数量</li>
+                <li class="list_sum">金额</li>
+                <li class="list_op">操作</li>
+            </ul>
+        </div>
+
+        <div class="cartBox">
+            <div class="shop_info">
+                <div class="all_check">
+                    <!--店铺全选-->
+                    <input type="checkbox" id="shop_a" class="shopChoice">
+                    <!-- <label for="shop_a" class="shop"></label> -->
+                </div>
+                <!-- <div class="shop_name">
+                    <a href="javascript:;">乐融商城</a>
+                </div> -->
+            </div>
+            <div class="order_content">
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_2" class="son_check">
+                        <label for="checkbox_2"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="./images/ia_101.jpg" alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">云豹底座 YUNB43A</a></div>
+                    </li>
+                    <li class="list_info">
+                        <p>规格：默认</p>
+                        <p>尺寸：166*166</p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <!--底部-->
+        <div class="bar-wrapper">
+            <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+                <div class="calBtn"><a href="javascript:;">结算</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p>您确认要删除该宝贝吗？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
+                class="dialog-close">关闭</a></div>
+    </section>
+
+<!-- 底部开始 ks-->
+<div class="footer">
+        <div class="container clearfix">
+            <div class="footer-l">
+                <dl>
+                    <dt>选购及了解</dt>
+                    <dd><a>超级电视</a></a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+                <dl>
+                    <dt>选购及了解</a></dt>
+                    <dd><a>超级电视</a></dd>
+                    <dd><a>屏霸</a></dd>
+                    <dd><a>生活家</a></dd>
+                </dl>
+            </div>
+            <div class="footer-r clearfix">
+                <h4>1010-9000</h4>
+                <span>在线客服</span>
+                <div>服务时间：9:00-22:00</div>
+                <p>*生活家频道商品服务
+                    需联系详情页商家电话</p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部结束 end -->
+    <!-- 版本开始 ks-->
+    <div class="bb">
+        <div class="container">
+            <div>Copyright © 2004-2019 乐融商城 All rights reserved | 京ICP备19019019号-1|京公网安备：11000002000099号 | 营业执照信息</div>
+        </div>
+    </div>
+    <!-- 版本开始 end-->
+
+</body>
+<script src="js/jquery.min.js"></script>
+    <script src="js/carts.js"></script>
+
+</html>

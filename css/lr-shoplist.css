@@ -398,19 +398,15 @@ body {
     display: block;
     margin-top: 6px
 }
-.car-main span:nth-child(1){
-    display: block;
-    margin-top: 24px
-}
 
-.car-main a span{
+.car-main span:nth-child(3) {
     width: 174px;
     height: 30px;
     line-height: 30px;
     background: #C80000;
     color: #fff;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     cursor: pointer;
 }
 
