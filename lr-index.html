@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./swiper/swiper.min.css">
     <script src="./swiper/swiper.min.js"></script>
     <script src="./js/jquery-1.11.0.min.js"></script>
-    <script src="./js/lr-table.js"></script>
+    <script src="./js/cookie.js"></script>
+
 </head>
 
 <body>
@@ -30,11 +31,31 @@
                     <li><a href="">个人中心</a></li>
                     <li><a href="">合作渠道</a></li>
                     <li><a href="">帮助中心</a></li>
-                    <li><a href="">手机版</a></li>
+                    <li><a href="">退出</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- 登录之后 -->
+    <div class="header dv1">
+        <div class="container clearfix">
+            <div class="left-bar">
+                <ul>
+                    <li></li>
+                    <li><i class="usr">Admin</i><a>，欢迎登录</a></li>
+                </ul>
+            </div>
+            <div class="right-bar">
+                <ul>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">合作渠道</a></li>
+                    <li><a href="">帮助中心</a></li>
+                    <li class="exit"><a href="">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 登录之后 -->
     <!-- header -->
     <!-- nav-->
     <div class="nav clearfix">
@@ -986,7 +1007,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="./images/ia_10062.jpg" alt="" >
+                        <img src="./images/ia_10062.jpg" alt="">
                         <div class="show">
                             <h3>Y32底座版</h3>
                             <p>适配超5系列 | 全能云豹底座</p>
@@ -1261,85 +1282,7 @@
             <li><a>F7</a></li>
         </ul>
     </div>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true, // 循环模式选项
-
-            // 如果需要分页器
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                stopOnLastSlide: false,
-                disableOnInteraction: false,
-            },
-        })
-        for (var i = 0; i < mySwiper.pagination.bullets.length; i++) {
-            mySwiper.pagination.bullets[i].onclick = function () {
-                this().show()
-            }
-        }
-        //鼠标滑过pagination控制swiper切换
-
-
-        // 楼层
-        $(".lt li").click(function(){
-        // console.log($(this).index());   //jq的方法，返回值就是索引
-        var i = $(this).index();
-        // poistion只能获取定位的值，而offset还能获取margin的值
-        //  $("div").eq(i)：找到当前对应的div
-        var t = $(".dv").eq(i).offset().top;    //滚动的距离
-        $("html").animate({
-            scrollTop: t
-        })
-    })
-
-        // 退出功能-----------------
-		// class Index{
-		// 	constructor(){
-		// 		this.login = document.querySelector(".login");
-		// 		this.welcome = document.querySelector(".welcome");
-		// 		this.user = this.welcome.querySelector("span");
-		// 		this.exit = this.welcome.querySelector("em");
-				
-		// 		this.getMsg();
-		// 		this.addEvent()
-		// 	}
-		// 	addEvent(){
-		// 		var that = this;
-		// 		this.exit.onclick = function(){
-		// 			that.msg[that.i].onoff = "0";
-		// 			setCookie("userMsg",JSON.stringify(that.msg));
-		// 			location.reload();
-		// 		}
-		// 	}
-		// 	getMsg(){
-		// 		this.msg = getCookie("userMsg") ? JSON.parse(getCookie("userMsg")) : [];
-				
-		// 		this.i = null; 
-		// 		var type = this.msg.some((val,idx)=>{
-		// 			this.i = idx;
-		// 			return val.onoff === 1;
-		// 		})
-				
-		// 		if(type){
-		// 			this.login.style.display = "none";
-		// 			this.welcome.style.display = "block";
-		// 			this.user.innerHTML = this.msg[this.i].user;
-		// 		}
-		// 	}
-		// }
-		
-		// new Index;
-	</script>
+    
 </body>
-
+    <script src="./js/lr-index.js"></script>
 </html>
